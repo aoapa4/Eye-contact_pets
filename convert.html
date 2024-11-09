@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        canvas {
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+        #outputCanvas {
+            filter: blur(10px); 
+        }
+        nav {
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+    <nav>
+        <a href="index.html">홈</a>
+        <a href="convert.html">이미지 변환</a>
+        <a href="about.html">소개</a>
+    </nav>
+
+</head>
+<body style="text-align: center;">
+    <h1 style="text-align: center;">이미지 변환</h1>
+    <input type="file" id="imageUpload" accept="image/*">
+    <select id="versionSelect">
+        <option value="version1">강아지</option>
+        <option value="version2">고양이</option>
+    </select>
+    <button id="transformButton">변환하기</button>
+    <div id="container">
+        <div id="img">
+            <h2>원본 이미지</h2>
+            <canvas id="originalCanvas"></canvas>
+        </div>
+        <div id="img">
+            <h2>변환된 이미지</h2>
+            <canvas id="outputCanvas"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
